@@ -1,0 +1,11 @@
+node_modules/
+.vscode/
+.DS_Store
+e2e/output/screenshots/*.png
+e2e/output/report/*.html
+e2e/output/report/*.json
+e2e/output/results.json
+e2e/output/current-run.json
+e2e/output/report-config.json
+e2e/@rerun.txt
+e2e/packages-cache

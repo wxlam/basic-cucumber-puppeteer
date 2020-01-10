@@ -1,0 +1,38 @@
+{
+  "name": "simple-cucumber-puppeteer-example",
+  "version": "0.0.1",
+  "description": "Simple project to using cucumber and puppeteer",
+  "main": "index.js",
+  "scripts": {
+    "puppeteer": "NODE_ENV=local ./node_modules/cucumber/bin/cucumber-js --tags=@run -r step_definitions -f json:output/results.json -f progress",
+    "puppeteer:done": "NODE_ENV=local ./node_modules/cucumber/bin/cucumber-js --tags='@done' -r step_definitions -f json:output/results.json -f progress",
+    "puppeteer:pretty": "NODE_ENV=local ./node_modules/cucumber/bin/cucumber-js --tags=@run -r step_definitions -f json:output/results.json -f ./node_modules/cucumber-pretty",
+    "puppeteer:summary": "NODE_ENV=local ./node_modules/cucumber/bin/cucumber-js --tags=@run -r step_definitions -f json:output/results.json -f rerun:@rerun.txt",
+    "puppeteer:rerun": "NODE_ENV=local ./node_modules/cucumber/bin/cucumber-js @rerun.txt -r step_definitions -f json:output/results.json",
+    "puppeteer:headless": "NODE_ENV=headless ./node_modules/cucumber/bin/cucumber-js --tags=@run -r step_definitions -f json:output/results.json",
+    "puppeteer:chrome": "NODE_ENV=chrome ./node_modules/cucumber/bin/cucumber-js --tags=@run -r step_definitions -f json:output/results.json",
+    "report:html": "./node_modules/.bin/custom-cucumber-report-generator -f output/results.json -i output/report-config.json",
+    "report:junit": "cat output/results.json | ./node_modules/.bin/cucumber-junit > output/report/results.xml"
+  },
+  "author": "Wendy Lam",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "chai-shallow-deep-equal": "^1.4.6",
+    "cucumber-pretty": "^1.4.4",
+    "expect-puppeteer": "^3.3.0",
+    "fs": "^0.0.1-security",
+    "jest": "24.5.0",
+    "konfig": "^0.2.1",
+    "loadash": "^1.0.0",
+    "supertest": "^4.0.2"
+  },
+  "dependencies": {
+    "cucumber": "^4.2.1",
+    "cucumber-junit": "^1.7.1",
+    "custom-cucumber-report-generator": "^0.0.4",
+    "fs-extra": "^7.0.1",
+    "moment": "^2.24.0",
+    "puppeteer": "^1.13.0"
+  }
+}

@@ -1,0 +1,28 @@
+{
+    "default": {
+      "baseUrl": "https://mrbenhowl.github.io/auto-gen-boilerplate-code-babel-macro-codegen/",
+      "pageTimeout": "20000",
+      "headlessMode": false,
+      "reportConfig": {
+        "theme": "bootstrap",
+        "jsonFile": "output/results.json",
+        "output": "output/report/cucumber-report.html",
+        "screenshotsDirectory": "output/screenshots/",
+        "reportSuiteAsScenarios": false,
+        "launchReport": false,
+        "storeScreenshots": true,
+        "metadata": {
+            "App Version":"0.1.0",
+            "Test Environment": "Test Environment",
+            "Browser": "Browser Version",
+            "Platform": "Platform"
+        }
+      }
+    },
+    "headless": {
+      "headlessMode": true
+    },
+    "chrome": {
+      "chromiumPath": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+    }
+  }
