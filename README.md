@@ -1,7 +1,7 @@
 # Simple Cucumber/Puppeteer Example
 This project is a simple example of using cucumberJS with puppeteer 
 
-The test scenarios created tests the [create task list web app]((https://mrbenhowl.github.io/auto-gen-boilerplate-code-babel-macro-codegen/)) created by [mrbenhowl](https://github.com/mrbenhowl) 
+The test scenarios created tests the [create task list web app](https://mrbenhowl.github.io/auto-gen-boilerplate-code-babel-macro-codegen/) created by [mrbenhowl](https://github.com/mrbenhowl) 
 
 ## Getting started
 
@@ -18,7 +18,7 @@ The test scenarios created tests the [create task list web app]((https://mrbenho
 
 ### Generate Report
 
-`npm run report` or  `yarn report`
+`npm run report:html` or  `yarn report:html`
 
 cucumber html report will be generated in `output/report` folder
 
