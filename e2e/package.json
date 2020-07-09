@@ -11,6 +11,7 @@
     "puppeteer:rerun": "NODE_ENV=local ./node_modules/cucumber/bin/cucumber-js @rerun.txt -r step_definitions -f json:output/results.json",
     "puppeteer:headless": "NODE_ENV=headless ./node_modules/cucumber/bin/cucumber-js --tags=@run -r step_definitions -f json:output/results.json",
     "puppeteer:chrome": "NODE_ENV=chrome ./node_modules/cucumber/bin/cucumber-js --tags=@run -r step_definitions -f json:output/results.json",
+    "puppeteer:parallel": "NODE_ENV=headless ./node_modules/cucumber/bin/cucumber-js --tags=@run -r step_definitions -f json:output/results.json --parallel 2",
     "report:html": "./node_modules/.bin/custom-cucumber-report-generator -f output/results.json -i output/report-config.json",
     "report:junit": "cat output/results.json | ./node_modules/.bin/cucumber-junit > output/report/results.xml"
   },
@@ -28,11 +29,11 @@
     "supertest": "^4.0.2"
   },
   "dependencies": {
-    "cucumber": "^4.2.1",
+    "cucumber": "^6.0.5",
     "cucumber-junit": "^1.7.1",
     "custom-cucumber-report-generator": "^0.0.4",
     "fs-extra": "^7.0.1",
     "moment": "^2.24.0",
-    "puppeteer": "^1.13.0"
+    "puppeteer": "^5.0.0"
   }
 }
